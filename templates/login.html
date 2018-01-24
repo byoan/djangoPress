@@ -1,18 +1,11 @@
 {% load i18n %}
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{% trans 'Login' %}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="{% trans 'Login' %}">
-        </form>
+{% include 'head.html' %}
+        <main class="mainContainer mainContainerRow">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="{% trans 'Login' %}">
+            </form>
+        </main>
     </body>
 </html>

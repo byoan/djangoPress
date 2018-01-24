@@ -1,11 +1,5 @@
 {% load i18n %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% trans 'Article edition' %}</title>
-</head>
-<body>
+{% include 'head.html' %}
     <a href="{% url 'article' pk=form.instance.id %}">Back</a>
     <p>
         <form action="" method="post">{% csrf_token %}

@@ -1,11 +1,5 @@
 {% load i18n %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% trans 'Delete article' %}</title>
-</head>
-<body>
+{% include 'head.html' %}
     <form action="" method="post">{% csrf_token %}
         <p>Are you sure you want to delete "{{ object }}"?</p>
     <input type="submit" value="{% trans 'Confirm' %}" />

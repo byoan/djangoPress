@@ -1,0 +1,16 @@
+html, body {
+    height:100%;
+}
+.mainContainer {
+    display: flex;
+    height:100%;
+}
+.mainContainerRow {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainerColumn {
+    flex-direction: column;
+    justify-content: center;
+}
