@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from app.views import IndexView, ArticleDetails, ArticleCreation, RegisterView, \
-    LoginView, ArticleUpdate, ArticleDelete
+    LoginView, ArticleUpdate, ArticleDelete, ProfileView
 from django.contrib.auth import views as auth_views
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import ugettext_lazy as _
@@ -28,7 +28,8 @@ urlpatterns = [
     url(r'create$', ArticleCreation.as_view(), name="createArticle"),
     url(r'update/(?P<pk>\d+)', ArticleUpdate.as_view(), name="updateArticle"),
     url(r'delete/(?P<pk>\d+)', ArticleDelete.as_view(), name="deleteArticle"),
-    url(r'(?P<pk>\d+)$', ArticleDetails.as_view(), name="article"),
+    url(r'profile/(?P<pk>\w+)', ProfileView.as_view(), name='profile'),
+    url(r'(?P<pk>\d+)', ArticleDetails.as_view(), name="article"),
     url(r'login', LoginView.as_view(), name="login"),
     url(r'register', RegisterView.as_view(), name="register"),
     url(r'logout', auth_views.logout, {'next_page': '/'}, name='logout')
