@@ -12,7 +12,7 @@
     {% endif %}
     <ul>
     {% for article in object_list %}
-        <li>{{ article.title }} ({{ article.content }})</li>
+        <li><a href="{% url 'article' pk=article.pk %}">{{ article.title }} ({{ article.content }})</a></li>
     {% empty %}
         <li>No article available</li>
     {% endfor %}

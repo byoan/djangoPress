@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 11:42+0100\n"
+"POT-Creation-Date: 2018-01-24 11:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,20 +30,12 @@ msgstr ""
 msgid "Optionnal"
 msgstr ""
 
-#: djangoPress/urls.py:33
-msgid "create$"
+#: djangoPress/urls.py:37
+msgid "^$"
 msgstr ""
 
-#: djangoPress/urls.py:34
-msgid "login"
-msgstr ""
-
-#: djangoPress/urls.py:35
-msgid "register"
-msgstr ""
-
-#: djangoPress/urls.py:36
-msgid "logout"
+#: templates/article.html:17
+msgid "Edit this article"
 msgstr ""
 
 #: templates/articleCreateForm.html:6 templates/home.html:11
@@ -52,6 +44,10 @@ msgstr ""
 
 #: templates/articleCreateForm.html:10
 msgid "Back"
+msgstr ""
+
+#: templates/articleUpdateform.html:6
+msgid "Article edition"
 msgstr ""
 
 #: templates/home.html:9

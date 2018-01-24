@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login
 from app.forms.loginForm import LoginForm
 from app.forms.registerForm import RegisterForm
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, CreateView
+from django.views.generic import DetailView, CreateView, UpdateView
 from django.views.generic.list import ListView
 from django.views import generic
 
@@ -94,3 +94,10 @@ class RegisterView(generic.FormView):
             user = authenticate(username=username, password=password)
             login(self.request, user)
             return super(RegisterView, self).form_valid(form)
+
+
+class ArticleUpdate(UpdateView):
+    model = Article
+    fields = ['title', 'content']
+    template_name = 'articleUpdateForm.html'
+    success_url = reverse_lazy('index')
