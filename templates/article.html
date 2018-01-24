@@ -1,13 +1,7 @@
 {% load i18n %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ object.title }}</title>
-</head>
-<body>
+{% include 'head.html' %}
     <main>
-        <a href="{% url 'index' %}">{% trans 'Back' %}</a>
+        <a class="btn btn-light" href="{% url 'index' %}">{% trans 'Back' %}</a>
         <article>
             <h1>{{ object.title }}</h1>
             <h3>{{ object.author }}</h3>
@@ -15,8 +9,8 @@
                 {{ object.content }}
             </p>
         </article>
-        <a href="{% url 'updateArticle' pk=object.pk %}">{% trans 'Edit this article' %}</a>
-        <a href="{% url 'deleteArticle' pk=object.pk %}">{% trans 'Delete this article' %}</a>
+        <a class="btn btn-info" href="{% url 'updateArticle' pk=object.pk %}">{% trans 'Edit this article' %}</a>
+        <a class="btn btn-danger" href="{% url 'deleteArticle' pk=object.pk %}">{% trans 'Delete this article' %}</a>
     </main>
 </body>
 </html>

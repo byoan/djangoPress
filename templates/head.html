@@ -1,10 +1,20 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Django</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Djangopressss</title>
 </head>
 <body>
 
-</body>
-</html>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">DjandoPress</a>
+        {% if user.is_authenticated %}
+            <button class="btn btn-outline-success">{% trans 'Create an article' %}</button>
+        {% endif %}
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
