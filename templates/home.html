@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <p>Homeppppppaaaaage</p>
+    <ul>
+    {% for article in object_list %}
+        <li>{{ article.title }} ({{ article.content }})</li>
+    {% empty %}
+        <li>No article available</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
