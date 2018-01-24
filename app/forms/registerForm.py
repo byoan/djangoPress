@@ -19,12 +19,12 @@ class RegisterForm(UserCreationForm):
     email = forms.EmailField(max_length=100)
     first_name = forms.CharField(
         max_length=30,
-        required=False,
+        required=True,
         help_text=_('Optionnal')
     )
     last_name = forms.CharField(
         max_length=30,
-        required=False,
+        required=True,
         help_text=_('Optionnal')
     )
 
