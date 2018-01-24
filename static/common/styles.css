@@ -1,6 +1,11 @@
 html, body {
     height:100%;
 }
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .mainContainer {
     display: flex;
     height:100%;
@@ -13,4 +18,67 @@ html, body {
 .mainContainerColumn {
     flex-direction: column;
     justify-content: center;
+}
+.dropdown-menu {
+    right: 0!important;
+    left: inherit!important;
+}
+.articleContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px 5px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+    padding: 3rem;
+    width: 75%;
+    margin: 2rem;
+}
+.articleDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 75%;
+    margin: 2rem;
+}
+.articleButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.homePageContainer .articleContainer {
+    width: 60%;
+    transition: all .15s ease;
+    box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+}
+.homePageContainer .articleContainer:hover {
+    transform: translateY(1px);
+    box-shadow: 0 15px 35px 5px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+    cursor: pointer;
+}
+a.articleContent {
+    color: #212529;
+    outline: 0;
+    text-decoration: none;
+}
+a.articleContent:hover, a.articleContent:active, a.articleContent:focus {
+    outline: 0;
+}
+.articleDate {
+    float: right;
+    font-size: 1rem;
+}
+.articleContentContainer {
+    margin-top: 5rem;
+    word-wrap: break-word;
+}
+.homePageContainer h1 {
+    margin-top: 1rem;
+}
+.errorlist {
+    background-color: #dc3545;
 }
