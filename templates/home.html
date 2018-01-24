@@ -5,7 +5,8 @@
     <title>Home</title>
 </head>
 <body>
-    <p>Homeppppppaaaaage</p>
+    <h1>Homeppppppaaaaage</h1>
+    <a href="{% url 'createArticle' %}">Create an article</a>
     <ul>
     {% for article in object_list %}
         <li>{{ article.title }} ({{ article.content }})</li>

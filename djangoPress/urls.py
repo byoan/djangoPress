@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from app.views import IndexView, ArticleDetails
+from app.views import IndexView, ArticleDetails, ArticleCreation
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name="index"),
     url(r'(?P<pk>\d+)$', ArticleDetails.as_view(), name="article"),
+    url(r'create$', ArticleCreation.as_view(), name="createArticle"),
     path('admin/', admin.site.urls),
 ]
