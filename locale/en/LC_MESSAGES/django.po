@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 11:58+0100\n"
+"POT-Creation-Date: 2018-01-24 22:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,38 +30,58 @@ msgstr ""
 msgid "Optionnal"
 msgstr ""
 
-#: djangoPress/urls.py:37
+#: djangoPress/urls.py:39
 msgid "^$"
 msgstr ""
 
-#: templates/article.html:17
+#: templates/article.html:7 templates/home.html:11
+msgid "by"
+msgstr ""
+
+#: templates/article.html:15
 msgid "Edit this article"
 msgstr ""
 
-#: templates/articleCreateForm.html:6 templates/home.html:11
-msgid "Create an article"
+#: templates/article.html:16
+msgid "Delete this article"
 msgstr ""
 
-#: templates/articleCreateForm.html:10
+#: templates/articleCreateForm.html:3
 msgid "Back"
 msgstr ""
 
-#: templates/articleUpdateform.html:6
-msgid "Article edition"
+#: templates/articleCreateForm.html:6 templates/register.html:6
+msgid "Create"
 msgstr ""
 
-#: templates/home.html:9
-msgid "Home djangopress"
+#: templates/articleDeleteForm.html:5
+msgid "Confirm"
 msgstr ""
 
-#: templates/login.html:7 templates/login.html:15
+#: templates/head.html:19 templates/head.html:20
+msgid "Search"
+msgstr ""
+
+#: templates/head.html:29
+msgid "Create an article"
+msgstr ""
+
+#: templates/head.html:30
+msgid "My account"
+msgstr ""
+
+#: templates/head.html:32
+msgid "Logout"
+msgstr ""
+
+#: templates/head.html:36 templates/login.html:7
 msgid "Login"
 msgstr ""
 
-#: templates/register.html:7
+#: templates/head.html:37
 msgid "Register"
 msgstr ""
 
-#: templates/register.html:16
-msgid "Create"
+#: templates/home.html:5
+msgid "Latest articles"
 msgstr ""

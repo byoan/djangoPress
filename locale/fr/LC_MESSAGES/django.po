@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 11:42+0100\n"
+"POT-Creation-Date: 2018-01-24 22:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,46 +30,78 @@ msgstr "Confirmez votre mot de passe"
 msgid "Optionnal"
 msgstr "Optionnel"
 
-#: djangoPress/urls.py:33
-msgid "create$"
-msgstr "creer"
+#: djangoPress/urls.py:39
+msgid "^$"
+msgstr ""
 
-#: djangoPress/urls.py:34
+#: templates/article.html:7 templates/home.html:11
+msgid "by"
+msgstr "par"
+
+#: templates/article.html:15
+msgid "Edit this article"
+msgstr "Editer cet article"
+
+#: templates/article.html:16
 #, fuzzy
-#| msgid "Login"
-msgid "login"
-msgstr "connexion"
+#| msgid "Create an article"
+msgid "Delete this article"
+msgstr "Supprimer cet article"
 
-#: djangoPress/urls.py:35
-#, fuzzy
-#| msgid "Register"
-msgid "register"
-msgstr "enregistrement"
-
-#: djangoPress/urls.py:36
-msgid "logout"
-msgstr "deconnexion"
-
-#: templates/articleCreateForm.html:6 templates/home.html:11
-msgid "Create an article"
-msgstr "Créer un article"
-
-#: templates/articleCreateForm.html:10
+#: templates/articleCreateForm.html:3
 msgid "Back"
 msgstr "Retour"
 
-#: templates/home.html:9
-msgid "Home djangopress"
-msgstr "Accueil djangopress"
+#: templates/articleCreateForm.html:6 templates/register.html:6
+msgid "Create"
+msgstr "Créer"
 
-#: templates/login.html:7 templates/login.html:15
+#: templates/articleDeleteForm.html:5
+msgid "Confirm"
+msgstr "Confirmer"
+
+#: templates/head.html:19 templates/head.html:20
+msgid "Search"
+msgstr "Rechercher"
+
+#: templates/head.html:29
+msgid "Create an article"
+msgstr "Créer un article"
+
+#: templates/head.html:30
+msgid "My account"
+msgstr "Mon compte"
+
+#: templates/head.html:32
+#| msgid "logout"
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: templates/head.html:36 templates/login.html:7
 msgid "Login"
 msgstr "Connexion"
 
-#: templates/register.html:7
+#: templates/head.html:37
 msgid "Register"
 msgstr "Créer un compte"
 
-#: templates/register.html:16
-msgid "Create"
-msgstr "Créer"
+#: templates/home.html:5
+#| msgid "Create an article"
+msgid "Latest articles"
+msgstr "Derniers articles"
+
+#~ msgid "create$"
+#~ msgstr "creer"
+
+#, fuzzy
+#~| msgid "Login"
+#~ msgid "login"
+#~ msgstr "connexion"
+
+#, fuzzy
+#~| msgid "Register"
+#~ msgid "register"
+#~ msgstr "enregistrement"
+
+#~ msgid "Home djangopress"
+#~ msgstr "Accueil djangopress"
