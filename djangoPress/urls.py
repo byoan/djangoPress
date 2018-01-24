@@ -17,11 +17,21 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from app.views import IndexView, ArticleDetails, ArticleCreation
+from app.views import IndexView, ArticleDetails, ArticleCreation, RegisterView, \
+    LoginView
+from django.contrib.auth import views as auth_views
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import ugettext_lazy as _
 
 urlpatterns = [
-    url(r'^$', IndexView.as_view(), name="index"),
     url(r'(?P<pk>\d+)$', ArticleDetails.as_view(), name="article"),
-    url(r'create$', ArticleCreation.as_view(), name="createArticle"),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += i18n_patterns(
+    url(_(r'^$'), IndexView.as_view(), name="index"),
+    url(_(r'create$'), ArticleCreation.as_view(), name="createArticle"),
+    url(_(r'login'), LoginView.as_view(), name="login"),
+    url(_(r'register'), RegisterView.as_view(), name="register"),
+    url(_(r'logout'), auth_views.logout, {'next_page': '/'}, name='logout')
+)
