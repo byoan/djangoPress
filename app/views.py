@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login
 from app.forms.loginForm import LoginForm
 from app.forms.registerForm import RegisterForm
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, CreateView, UpdateView
+from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views import generic
 
@@ -18,6 +18,7 @@ class IndexView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
 
 class ArticleDetails(DetailView):
     template_name = 'article.html'
@@ -76,6 +77,7 @@ class LoginView(generic.FormView):
 
         return super(LoginView, self).form_valid(form)
 
+
 class RegisterView(generic.FormView):
     template_name = 'register.html'
     form_class = RegisterForm
@@ -100,4 +102,10 @@ class ArticleUpdate(UpdateView):
     model = Article
     fields = ['title', 'content']
     template_name = 'articleUpdateForm.html'
+    success_url = reverse_lazy('index')
+
+
+class ArticleDelete(DeleteView):
+    model = Article
+    template_name = 'articleDeleteForm.html'
     success_url = reverse_lazy('index')

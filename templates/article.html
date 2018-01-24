@@ -7,6 +7,7 @@
 </head>
 <body>
     <main>
+        <a href="{% url 'index' %}">{% trans 'Back' %}</a>
         <article>
             <h1>{{ object.title }}</h1>
             <h3>{{ object.author }}</h3>
@@ -15,6 +16,7 @@
             </p>
         </article>
         <a href="{% url 'updateArticle' pk=object.pk %}">{% trans 'Edit this article' %}</a>
+        <a href="{% url 'deleteArticle' pk=object.pk %}">{% trans 'Delete this article' %}</a>
     </main>
 </body>
 </html>
