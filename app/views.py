@@ -1,4 +1,6 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+
 from app.forms.loginForm import LoginForm
 from app.forms.registerForm import RegisterForm
 from django.urls import reverse_lazy
@@ -7,7 +9,7 @@ from django.views.generic.list import ListView
 from django.views import generic
 
 from app.forms.CreateArticleForm import CreateArticleForm
-from app.models import Article, Author
+from app.models import Article
 
 
 class IndexView(ListView):
@@ -22,7 +24,6 @@ class IndexView(ListView):
 
 class ArticleDetails(DetailView):
     template_name = 'article.html'
-
     model = Article
 
     def get_context_data(self, **kwargs):
@@ -38,7 +39,7 @@ class ArticleCreation(CreateView):
 
     def form_valid(self, form):
         obj = form.save(commit=False)
-        obj.author = Author(self.request.user.id)
+        obj.author = User(self.request.user.id)
         if form.is_valid():
             obj.save()
             return super(ArticleCreation, self).form_valid(form)
@@ -109,3 +110,12 @@ class ArticleDelete(DeleteView):
     model = Article
     template_name = 'articleDeleteForm.html'
     success_url = reverse_lazy('index')
+
+
+class ProfileView(DetailView):
+    model = User
+    template_name = 'profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
