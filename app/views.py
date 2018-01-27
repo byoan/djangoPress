@@ -102,7 +102,7 @@ class RegisterView(generic.FormView):
 
 class ArticleUpdate(LoginRequiredMixin, UpdateView):
     model = Article
-    fields = ['title', 'content']
+    form_class = UpdateArticleForm
     template_name = 'articleUpdateForm.html'
     success_url = reverse_lazy('index')
 
