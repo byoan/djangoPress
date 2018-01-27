@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 21:01+0100\n"
+"POT-Creation-Date: 2018-01-27 21:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,6 @@ msgid "Password"
 msgstr "Mot de passse"
 
 #: app/forms/registerForm.py:12
-#| msgid "Enter a password"
 msgid "Enter a username"
 msgstr "Entrez un mot de passe"
 
@@ -72,7 +71,6 @@ msgid "profile/(?P<pk>\\w+)"
 msgstr ""
 
 #: djangoPress/urls.py:36
-#| msgid "Search"
 msgid "search$"
 msgstr ""
 
@@ -117,24 +115,39 @@ msgid "Create"
 msgstr "Créer"
 
 #: templates/articleDeleteForm.html:6
+#| msgid "Delete this article"
+msgid "Delete article"
+msgstr "Suppression d'arciel"
+
+#: templates/articleDeleteForm.html:8
 msgid "Are you sure you want to delete "
 msgstr "Etes-vous sur de vouloir supprimer "
 
-#: templates/articleDeleteForm.html:7
+#: templates/articleDeleteForm.html:9
 msgid "Confirm"
 msgstr "Confirmer"
 
-#: templates/articleUpdateForm.html:5
-#| msgid "Latest articles"
+#: templates/articleDeleteForm.html:12
+msgid ""
+"You are not the author of this article, and therefore are not allowed to "
+"delete it"
+msgstr "Vous n'êtes pas l'auteur de cet article, et ne pouvez par conséquent pas le supprimer"
+
+#: templates/articleUpdateForm.html:6
 msgid "Update article"
 msgstr "Modifier l'article"
+
+#: templates/articleUpdateForm.html:12
+msgid ""
+"You are not the author of this article, and therefore are not allowed to "
+"edit it"
+msgstr "Vous n'êtes pas l'auteur de cet article, et ne pouvez par conséquent pas l'éditer"
 
 #: templates/head.html:24 templates/head.html:25
 msgid "Search"
 msgstr "Rechercher"
 
 #: templates/head.html:34
-#| msgid "Latest articles"
 msgid "My articles"
 msgstr "Mes articles"
 
@@ -159,7 +172,6 @@ msgid "Articles from"
 msgstr "Articles de"
 
 #: templates/search.html:5
-#| msgid "Latest articles"
 msgid "Found articles"
 msgstr "Articles trouvés"
 

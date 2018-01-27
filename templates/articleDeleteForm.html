@@ -2,10 +2,15 @@
 {% include 'head.html' %}
  <div class="formContainerParent">
         <div class="formContainer">
-            <form action="" method="post">{% csrf_token %}
-                <p>{% trans 'Are you sure you want to delete ' %}"{{ object }}"?</p>
-                <input type="submit" class="btn btn-danger" value="{% trans 'Confirm' %}" />
-            </form>
+            {% if object.author.id == user.id %}
+                <h1>{% trans 'Delete article' %}</h1>
+                <form action="" method="post">{% csrf_token %}
+                    <p>{% trans 'Are you sure you want to delete ' %}"{{ object }}"?</p>
+                    <input type="submit" class="btn btn-danger" value="{% trans 'Confirm' %}" />
+                </form>
+            {% else %}
+                <h1>{% trans 'You are not the author of this article, and therefore are not allowed to delete it' %}</h1>
+            {% endif %}
         </div>
  </div>
 </body>
