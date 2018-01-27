@@ -125,10 +125,9 @@ msgid "Confirm"
 msgstr "Confirmer"
 
 #: templates/articleUpdateForm.html:5
-#, fuzzy
 #| msgid "Latest articles"
 msgid "Update article"
-msgstr "Derniers articles"
+msgstr "Modifier l'article"
 
 #: templates/head.html:24 templates/head.html:25
 msgid "Search"
@@ -160,10 +159,9 @@ msgid "Articles from"
 msgstr "Articles de"
 
 #: templates/search.html:5
-#, fuzzy
 #| msgid "Latest articles"
 msgid "Found articles"
-msgstr "Derniers articles"
+msgstr "Articles trouvés"
 
 #~ msgid "Optionnal"
 #~ msgstr "Optionnel"
