@@ -1,10 +1,14 @@
 {% load i18n %}
 {% include 'head.html' %}
-        <a href="{% url 'index' %}">{% trans 'Back' %}</a>
-         <form action="" method="post">{% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="{% trans 'Create' %}" />
-        </form>
-    </main>
+    <div class="formContainerParent">
+        <div class="formContainer">
+            <h1>{% trans 'Create an article' %}</h1>
+            <form action="" method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="{% trans 'Create' %}" />
+            </form>
+        </div>
+    </div>
+</main>
 </body>
 </html>

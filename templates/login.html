@@ -1,11 +1,14 @@
 {% load i18n %}
 {% include 'head.html' %}
-        <main class="mainContainer mainContainerRow">
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="{% trans 'Login' %}">
-            </form>
-        </main>
-    </body>
+<div class="formContainerParent">
+    <div class="formContainer">
+        <h1>{% trans 'Login' %}</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-success" value="{% trans 'Login' %}">
+        </form>
+    </div>
+</div>
+</body>
 </html>

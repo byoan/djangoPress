@@ -1,8 +1,12 @@
 {% load i18n %}
 {% include 'head.html' %}
-    <form action="" method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}"?</p>
-    <input type="submit" value="{% trans 'Confirm' %}" />
-</form>
+ <div class="formContainerParent">
+        <div class="formContainer">
+            <form action="" method="post">{% csrf_token %}
+                <p>{% trans 'Are you sure you want to delete ' %}"{{ object }}"?</p>
+                <input type="submit" class="btn btn-danger" value="{% trans 'Confirm' %}" />
+            </form>
+        </div>
+ </div>
 </body>
 </html>

@@ -44,18 +44,21 @@ main {
     justify-content: space-evenly;
     margin-top: 5rem;
 }
-.homePageContainer {
+.homePageContainer, .profilePageContainer, .searchPageContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
 }
-.homePageContainer .articleContainer {
+.profilePageContainer article {
+    width: 100%;
+}
+.homePageContainer .articleContainer, .profilePageContainer .articleContainer, .searchPageContainer .articleContainer {
     width: 60%;
     transition: all .15s ease;
     box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 }
-.homePageContainer .articleContainer:hover {
+.homePageContainer .articleContainer:hover, .profilePageContainer .articleContainer:hover, .searchPageContainer .articleContainer:hover {
     transform: translateY(1px);
     box-shadow: 0 15px 35px 5px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
     cursor: pointer;
@@ -76,9 +79,30 @@ a.articleContent:hover, a.articleContent:active, a.articleContent:focus {
     margin-top: 5rem;
     word-wrap: break-word;
 }
-.homePageContainer h1 {
+.homePageContainer h1, .profilePage h1, .searchPageContainer h1 {
     margin-top: 1rem;
 }
 .errorlist {
     background-color: #dc3545;
+}
+.profilePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.backButton {
+    margin:1rem 0 0 2rem;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    width: 70%;
+}
+.formContainer h1 {
+    margin-bottom: 1rem;
+}
+.formContainerParent {
+    display: flex;
+    justify-content: center;
 }

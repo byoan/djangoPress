@@ -1,7 +1,7 @@
 {% load i18n %}
 {% include 'head.html' %}
 
-        <article class="homePageContainer">
+        <div class="homePageContainer">
             <h1>{% trans 'Latest articles' %}</h1>
             {% for article in object_list reversed %}
                 <div class="articleContainer">
@@ -20,7 +20,7 @@
             {% empty %}
                 <li>No article available</li>
             {% endfor %}
-        </article>
+        </div>
     </main>
 
 </body>

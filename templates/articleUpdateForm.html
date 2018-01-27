@@ -1,11 +1,13 @@
 {% load i18n %}
 {% include 'head.html' %}
-    <a href="{% url 'article' pk=form.instance.id %}">Back</a>
-    <p>
-        <form action="" method="post">{% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Update" />
-        </form>
-    </p>
+ <div class="formContainerParent">
+        <div class="formContainer">
+            <h1>{% trans 'Update article' %}</h1>
+            <form action="" method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="Update" />
+            </form>
+        </div>
+ </div>
 </body>
 </html>
