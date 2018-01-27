@@ -1,0 +1,27 @@
+{% load i18n %}
+{% include 'head.html' %}
+
+        <div class="searchPageContainer">
+            <h1>{% trans 'Found articles' %}</h1>
+            {% for article in articles reversed %}
+                <div class="articleContainer">
+                    <a class="articleContent" href="{% url 'article' pk=article.pk %}">
+                        <article>
+                            <h2>
+                                {{ article.title }} - <i>{% trans 'by' %} {{ article.author }}</i>
+                                <em class="articleDate">{{ article.created_at|date:"d M Y" }}</em>
+                            </h2>
+                            <p>
+                                {{ article.content|truncatechars:50 }}
+                            </p>
+                        </article>
+                    </a>
+                </div>
+            {% empty %}
+                <li>No article available</li>
+            {% endfor %}
+        </div>
+    </main>
+
+</body>
+</html>

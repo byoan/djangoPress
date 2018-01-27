@@ -118,4 +118,12 @@ class ProfileView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        return contextclass SearchView(ListView):
+    template_name = 'search.html'
+    model = Article
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get('q')
+        context['articles'] = Article.objects.filter(content__icontains=query)
         return context
