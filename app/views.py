@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from app.forms.loginForm import LoginForm
 from app.forms.registerForm import RegisterForm
@@ -31,7 +32,7 @@ class ArticleDetails(DetailView):
         return context
 
 
-class ArticleCreation(CreateView):
+class ArticleCreation(LoginRequiredMixin, CreateView):
     model = Article
     template_name = 'articleCreateForm.html'
     form_class = CreateArticleForm
@@ -99,14 +100,14 @@ class RegisterView(generic.FormView):
             return super(RegisterView, self).form_valid(form)
 
 
-class ArticleUpdate(UpdateView):
+class ArticleUpdate(LoginRequiredMixin, UpdateView):
     model = Article
     fields = ['title', 'content']
     template_name = 'articleUpdateForm.html'
     success_url = reverse_lazy('index')
 
 
-class ArticleDelete(DeleteView):
+class ArticleDelete(LoginRequiredMixin, DeleteView):
     model = Article
     template_name = 'articleDeleteForm.html'
     success_url = reverse_lazy('index')
