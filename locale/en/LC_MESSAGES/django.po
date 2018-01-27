@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 22:52+0100\n"
+"POT-Creation-Date: 2018-01-27 21:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,83 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app/forms/registerForm.py:13
-msgid "Enter a password"
+#: app/forms/CreateArticleForm.py:11 app/forms/UpdateArticleForm.py:11
+msgid "Article title"
+msgstr ""
+
+#: app/forms/CreateArticleForm.py:16 app/forms/UpdateArticleForm.py:16
+msgid "Content"
+msgstr ""
+
+#: app/forms/loginForm.py:10
+msgid "Username"
+msgstr ""
+
+#: app/forms/loginForm.py:14
+msgid "Password"
+msgstr ""
+
+#: app/forms/registerForm.py:12
+msgid "Enter a username"
 msgstr ""
 
 #: app/forms/registerForm.py:17
+msgid "Enter a password"
+msgstr ""
+
+#: app/forms/registerForm.py:21
 msgid "Confirm your password"
 msgstr ""
 
-#: app/forms/registerForm.py:23 app/forms/registerForm.py:28
-msgid "Optionnal"
+#: app/forms/registerForm.py:26
+msgid "Enter your email address"
+msgstr ""
+
+#: app/views.py:58
+msgid "The sent data is invalid. Please check your input"
+msgstr ""
+
+#: app/views.py:73 app/views.py:106
+msgid "All the fields must be filled"
+msgstr ""
+
+#: app/views.py:81
+msgid "Username or password incorrect"
+msgstr ""
+
+#: app/views.py:111
+msgid "Your password must be 8 characters long min"
+msgstr ""
+
+#: djangoPress/urls.py:35
+msgid "profile/(?P<pk>\\w+)"
+msgstr ""
+
+#: djangoPress/urls.py:36
+msgid "search$"
+msgstr ""
+
+#: djangoPress/urls.py:37
+msgid "create$"
+msgstr ""
+
+#: djangoPress/urls.py:38
+msgid "update/(?P<pk>\\d+)"
 msgstr ""
 
 #: djangoPress/urls.py:39
+msgid "delete/(?P<pk>\\d+)"
+msgstr ""
+
+#: djangoPress/urls.py:40
 msgid "^$"
 msgstr ""
 
-#: templates/article.html:7 templates/home.html:11
+#: djangoPress/urls.py:41
+msgid "(?P<pk>\\d+)"
+msgstr ""
+
+#: templates/article.html:7 templates/home.html:11 templates/search.html:11
 msgid "by"
 msgstr ""
 
@@ -46,42 +106,54 @@ msgstr ""
 msgid "Delete this article"
 msgstr ""
 
-#: templates/articleCreateForm.html:3
-msgid "Back"
-msgstr ""
-
-#: templates/articleCreateForm.html:6 templates/register.html:6
-msgid "Create"
-msgstr ""
-
-#: templates/articleDeleteForm.html:5
-msgid "Confirm"
-msgstr ""
-
-#: templates/head.html:19 templates/head.html:20
-msgid "Search"
-msgstr ""
-
-#: templates/head.html:29
+#: templates/articleCreateForm.html:5 templates/head.html:33
 msgid "Create an article"
 msgstr ""
 
-#: templates/head.html:30
-msgid "My account"
+#: templates/articleCreateForm.html:8 templates/register.html:9
+msgid "Create"
 msgstr ""
 
-#: templates/head.html:32
+#: templates/articleDeleteForm.html:6
+msgid "Are you sure you want to delete "
+msgstr ""
+
+#: templates/articleDeleteForm.html:7
+msgid "Confirm"
+msgstr ""
+
+#: templates/articleUpdateForm.html:5
+msgid "Update article"
+msgstr ""
+
+#: templates/head.html:24 templates/head.html:25
+msgid "Search"
+msgstr ""
+
+#: templates/head.html:34
+msgid "My articles"
+msgstr ""
+
+#: templates/head.html:36
 msgid "Logout"
 msgstr ""
 
-#: templates/head.html:36 templates/login.html:7
+#: templates/head.html:40 templates/login.html:5 templates/login.html:9
 msgid "Login"
 msgstr ""
 
-#: templates/head.html:37
+#: templates/head.html:41 templates/register.html:5
 msgid "Register"
 msgstr ""
 
 #: templates/home.html:5
 msgid "Latest articles"
+msgstr ""
+
+#: templates/profile.html:7 templates/profile.html:9
+msgid "Articles from"
+msgstr ""
+
+#: templates/search.html:5
+msgid "Found articles"
 msgstr ""
