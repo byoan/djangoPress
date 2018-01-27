@@ -1,18 +1,19 @@
 from django import forms
-from django.forms import widgets, ModelForm
-
-
 from app.models import Article
+from django.utils.translation import ugettext_lazy as _
 
 
 class CreateArticleForm(forms.ModelForm):
 
     title = forms.CharField(
         max_length=100,
-        required=True
+        required=True,
+        label=_("Article title"),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     content = forms.CharField(
-        widget=forms.Textarea,
+        widget=forms.Textarea(attrs={'class': 'form-control'}),
+        label=_("Content"),
         required=True
     )
 
