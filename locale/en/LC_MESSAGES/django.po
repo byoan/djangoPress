@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 21:01+0100\n"
+"POT-Creation-Date: 2018-01-27 21:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,15 +115,31 @@ msgid "Create"
 msgstr ""
 
 #: templates/articleDeleteForm.html:6
+msgid "Delete article"
+msgstr ""
+
+#: templates/articleDeleteForm.html:8
 msgid "Are you sure you want to delete "
 msgstr ""
 
-#: templates/articleDeleteForm.html:7
+#: templates/articleDeleteForm.html:9
 msgid "Confirm"
 msgstr ""
 
-#: templates/articleUpdateForm.html:5
+#: templates/articleDeleteForm.html:12
+msgid ""
+"You are not the author of this article, and therefore are not allowed to "
+"delete it"
+msgstr ""
+
+#: templates/articleUpdateForm.html:6
 msgid "Update article"
+msgstr ""
+
+#: templates/articleUpdateForm.html:12
+msgid ""
+"You are not the author of this article, and therefore are not allowed to "
+"edit it"
 msgstr ""
 
 #: templates/head.html:24 templates/head.html:25
