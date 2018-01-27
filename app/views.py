@@ -2,12 +2,14 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+from app.forms.UpdateArticleForm import UpdateArticleForm
 from app.forms.loginForm import LoginForm
 from app.forms.registerForm import RegisterForm
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views import generic
+from django.utils.translation import ugettext_lazy as _
 
 from app.forms.CreateArticleForm import CreateArticleForm
 from app.models import Article
@@ -41,12 +43,19 @@ class ArticleCreation(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         obj = form.save(commit=False)
         obj.author = User(self.request.user.id)
+
+        if obj.author is None:
+            form.add_error(None,
+                           'An error occurred while retrieving your account '
+                           'information for the article creation')
+            return super(ArticleCreation, self).form_invalid(form)
+
         if form.is_valid():
             obj.save()
             return super(ArticleCreation, self).form_valid(form)
 
-        form.add_error('username',
-                       'Username must have a "a"')
+        form.add_error(None,
+                       _('The sent data is invalid. Please check your input'))
         return super(ArticleCreation, self).form_invalid(form)
 
 
@@ -58,14 +67,10 @@ class LoginView(generic.FormView):
     def form_valid(self, form):
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password')
-        if 'a' not in username:
-            form.add_error('username',
-                           'Username must have a "a"')
-            return super(LoginView, self).form_invalid(form)
 
-        if len(password) < 8:
-            form.add_error('password',
-                           'Min length of the password must be 8 characters')
+        if username is None or password is None:
+            form.add_error(None,
+                           _('All the fields must be filled'))
             return super(LoginView, self).form_invalid(form)
 
         user = authenticate(username=username,
@@ -73,7 +78,8 @@ class LoginView(generic.FormView):
 
         if user is None:
             form.add_error(None,
-                           'Username or password incorrect')
+                           _('Username or password incorrect'))
+            return super(LoginView, self).form_invalid(form)
 
         login(self.request, user)
 
@@ -94,6 +100,16 @@ class RegisterView(generic.FormView):
 
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
+
+            if username is None or password is None:
+                form.add_error(None,
+                               _('All the fields must be filled'))
+                return super(RegisterView, self).form_invalid(form)
+
+            if len(password) < 8:
+                form.add_error('password',
+                               _('Your password must be 8 characters long min'))
+                return super(LoginView, self).form_invalid(form)
 
             user = authenticate(username=username, password=password)
             login(self.request, user)
@@ -119,7 +135,11 @@ class ProfileView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        return contextclass SearchView(ListView):
+        context['articles'] = Article.objects.filter(author=context['user'])
+        return context
+
+
+class SearchView(ListView):
     template_name = 'search.html'
     model = Article
 
