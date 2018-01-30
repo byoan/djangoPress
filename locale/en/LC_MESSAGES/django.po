@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 21:13+0100\n"
+"POT-Creation-Date: 2018-01-30 22:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Delete this article"
 msgstr ""
 
-#: templates/articleCreateForm.html:5 templates/head.html:33
+#: templates/articleCreateForm.html:5 templates/head.html:41
 msgid "Create an article"
 msgstr ""
 
@@ -142,23 +142,27 @@ msgid ""
 "edit it"
 msgstr ""
 
-#: templates/head.html:24 templates/head.html:25
+#: templates/head.html:32
+msgid "Search an article"
+msgstr ""
+
+#: templates/head.html:32 templates/head.html:33
 msgid "Search"
 msgstr ""
 
-#: templates/head.html:34
+#: templates/head.html:42
 msgid "My articles"
 msgstr ""
 
-#: templates/head.html:36
+#: templates/head.html:44
 msgid "Logout"
 msgstr ""
 
-#: templates/head.html:40 templates/login.html:5 templates/login.html:9
+#: templates/head.html:48 templates/login.html:5 templates/login.html:9
 msgid "Login"
 msgstr ""
 
-#: templates/head.html:41 templates/register.html:5
+#: templates/head.html:49 templates/register.html:5
 msgid "Register"
 msgstr ""
 

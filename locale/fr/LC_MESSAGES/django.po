@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 21:13+0100\n"
+"POT-Creation-Date: 2018-01-30 22:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr "Editer cet article"
 msgid "Delete this article"
 msgstr "Supprimer cet article"
 
-#: templates/articleCreateForm.html:5 templates/head.html:33
+#: templates/articleCreateForm.html:5 templates/head.html:41
 msgid "Create an article"
 msgstr "Créer un article"
 
@@ -115,7 +115,6 @@ msgid "Create"
 msgstr "Créer"
 
 #: templates/articleDeleteForm.html:6
-#| msgid "Delete this article"
 msgid "Delete article"
 msgstr "Suppression d'arciel"
 
@@ -131,7 +130,9 @@ msgstr "Confirmer"
 msgid ""
 "You are not the author of this article, and therefore are not allowed to "
 "delete it"
-msgstr "Vous n'êtes pas l'auteur de cet article, et ne pouvez par conséquent pas le supprimer"
+msgstr ""
+"Vous n'êtes pas l'auteur de cet article, et ne pouvez par conséquent pas le "
+"supprimer"
 
 #: templates/articleUpdateForm.html:6
 msgid "Update article"
@@ -141,25 +142,32 @@ msgstr "Modifier l'article"
 msgid ""
 "You are not the author of this article, and therefore are not allowed to "
 "edit it"
-msgstr "Vous n'êtes pas l'auteur de cet article, et ne pouvez par conséquent pas l'éditer"
+msgstr ""
+"Vous n'êtes pas l'auteur de cet article, et ne pouvez par conséquent pas "
+"l'éditer"
 
-#: templates/head.html:24 templates/head.html:25
+#: templates/head.html:32
+#| msgid "Create an article"
+msgid "Search an article"
+msgstr "Trouver un article"
+
+#: templates/head.html:32 templates/head.html:33
 msgid "Search"
 msgstr "Rechercher"
 
-#: templates/head.html:34
+#: templates/head.html:42
 msgid "My articles"
 msgstr "Mes articles"
 
-#: templates/head.html:36
+#: templates/head.html:44
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: templates/head.html:40 templates/login.html:5 templates/login.html:9
+#: templates/head.html:48 templates/login.html:5 templates/login.html:9
 msgid "Login"
 msgstr "Connexion"
 
-#: templates/head.html:41 templates/register.html:5
+#: templates/head.html:49 templates/register.html:5
 msgid "Register"
 msgstr "Créer un compte"
 
