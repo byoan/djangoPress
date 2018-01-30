@@ -12,7 +12,7 @@
                                 <em class="articleDate">{{ article.created_at|date:"d M Y" }}</em>
                             </h2>
                             <p>
-                                {{ article.content|truncatechars:50 }}
+                                {{ article.content|truncatechars_html:50|safe }}
                             </p>
                         </article>
                     </a>
