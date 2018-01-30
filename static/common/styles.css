@@ -106,3 +106,7 @@ a.articleContent:hover, a.articleContent:active, a.articleContent:focus {
     display: flex;
     justify-content: center;
 }
+.collapse.show {
+    display: flex;
+    margin-top: 0.5rem;
+}
