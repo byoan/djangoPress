@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-30 22:35+0100\n"
+"POT-Creation-Date: 2018-02-14 13:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,47 +50,55 @@ msgstr ""
 msgid "Enter your email address"
 msgstr ""
 
-#: app/views.py:58
+#: app/forms/registerForm.py:32
+msgid "Enter your first name"
+msgstr ""
+
+#: app/forms/registerForm.py:38
+msgid "Enter your last name"
+msgstr ""
+
+#: app/views.py:59
 msgid "The sent data is invalid. Please check your input"
 msgstr ""
 
-#: app/views.py:73 app/views.py:106
+#: app/views.py:74 app/views.py:107
 msgid "All the fields must be filled"
 msgstr ""
 
-#: app/views.py:81
+#: app/views.py:82
 msgid "Username or password incorrect"
 msgstr ""
 
-#: app/views.py:111
+#: app/views.py:112
 msgid "Your password must be 8 characters long min"
 msgstr ""
 
-#: djangoPress/urls.py:35
+#: djangoPress/urls.py:41
 msgid "profile/(?P<pk>\\w+)"
 msgstr ""
 
-#: djangoPress/urls.py:36
+#: djangoPress/urls.py:42
 msgid "search$"
 msgstr ""
 
-#: djangoPress/urls.py:37
+#: djangoPress/urls.py:43
 msgid "create$"
 msgstr ""
 
-#: djangoPress/urls.py:38
+#: djangoPress/urls.py:44
 msgid "update/(?P<pk>\\d+)"
 msgstr ""
 
-#: djangoPress/urls.py:39
+#: djangoPress/urls.py:45
 msgid "delete/(?P<pk>\\d+)"
 msgstr ""
 
-#: djangoPress/urls.py:40
+#: djangoPress/urls.py:46
 msgid "^$"
 msgstr ""
 
-#: djangoPress/urls.py:41
+#: djangoPress/urls.py:47
 msgid "(?P<pk>\\d+)"
 msgstr ""
 
@@ -98,11 +106,11 @@ msgstr ""
 msgid "by"
 msgstr ""
 
-#: templates/article.html:15
+#: templates/article.html:20
 msgid "Edit this article"
 msgstr ""
 
-#: templates/article.html:16
+#: templates/article.html:21
 msgid "Delete this article"
 msgstr ""
 

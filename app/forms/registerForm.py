@@ -28,12 +28,14 @@ class RegisterForm(UserCreationForm):
     first_name = forms.CharField(
         max_length=30,
         required=True,
-        widget=forms.TextInput(attrs={'class': 'form-control'})
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label=_('Enter your first name')
     )
     last_name = forms.CharField(
         max_length=30,
         required=True,
-        widget=forms.TextInput(attrs={'class': 'form-control'})
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label=_('Enter your last name')
     )
 
     class Meta:
