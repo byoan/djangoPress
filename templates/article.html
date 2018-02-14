@@ -4,7 +4,7 @@
         <div class="articleDetailsContainer">
             <article class="articleContent">
                 <h1>{{ object.title }} <em class="articleDate">{{ object.created_at|date:"d M Y h:m" }}</em></h1>
-                <h3><i>{% trans 'by' %} {{ object.author }}</i></h3>
+                <h3><i>{% trans 'by' %} <a href="{% url 'profile' pk=object.author.id %}">{{ object.author }}</a></i></h3>
                 {% if object.image %}
                     <div class="articleImageContainer">
                         <img src="{{ object.image.url }}">
