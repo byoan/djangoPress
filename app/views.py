@@ -134,9 +134,12 @@ class ProfileView(DetailView):
     model = User
     template_name = 'profile.html'
 
+    def get_context_object_name(self, obj):
+        return 'profile'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['articles'] = Article.objects.filter(author=context['user'])
+        context['articles'] = Article.objects.filter(author=context['profile'])
         return context
 
 

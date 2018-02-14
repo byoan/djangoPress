@@ -3,10 +3,10 @@
 
 <main class="profilePage">
     <h1>
-        {% if user.first_name and user.last_name %}
-            {% trans 'Articles from' %} {{ user.first_name }} {{ user.last_name }}
+        {% if profile.first_name and profile.last_name %}
+            {% trans 'Articles from' %} {{ profile.first_name }} {{ profile.last_name }}
         {% else %}
-            {% trans 'Articles from' %} {{ user }}
+            {% trans 'Articles from' %} {{ profile }}
         {% endif %}
     </h1>
 
