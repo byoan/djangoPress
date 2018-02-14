@@ -10,6 +10,7 @@ from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views import generic
 from django.utils.translation import ugettext_lazy as _
+from django.db.models import Q
 
 from app.forms.CreateArticleForm import CreateArticleForm
 from app.models import Article
@@ -146,5 +147,6 @@ class SearchView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         query = self.request.GET.get('q')
-        context['articles'] = Article.objects.filter(content__icontains=query)
+        context['articles'] = Article.objects.filter(
+            Q(title__icontains=query) | Q(content__icontains=query))
         return context
