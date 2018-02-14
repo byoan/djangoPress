@@ -16,7 +16,8 @@ class CreateArticleForm(forms.ModelForm):
         label=_("Content"),
         required=True
     )
+    image = forms.ImageField(required=False)
 
     class Meta:
         model = Article
-        fields = ('title', 'content')
+        fields = ('title', 'content', 'image')

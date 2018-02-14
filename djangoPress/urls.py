@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.views.static import serve
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
@@ -24,8 +25,13 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import ugettext_lazy as _
 
+from djangoPress import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^media/(?P<path>.*)$', serve,
+        {'document_root': settings.MEDIA_ROOT},
+    ),
     url(r'login', LoginView.as_view(), name="login"),
     url(r'register', RegisterView.as_view(), name="register"),
     url(r'logout', auth_views.logout, {'next_page': '/'}, name='logout')

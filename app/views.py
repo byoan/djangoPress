@@ -44,7 +44,7 @@ class ArticleCreation(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         obj = form.save(commit=False)
         obj.author = User(self.request.user.id)
-
+        obj.image = form.files.get("image")
         if obj.author is None:
             form.add_error(None,
                            'An error occurred while retrieving your account '

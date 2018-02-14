@@ -5,6 +5,11 @@
             <article class="articleContent">
                 <h1>{{ object.title }} <em class="articleDate">{{ object.created_at|date:"d M Y h:m" }}</em></h1>
                 <h3><i>{% trans 'by' %} {{ object.author }}</i></h3>
+                {% if object.image %}
+                    <div class="articleImageContainer">
+                        <img src="{{ object.image.url }}">
+                    </div>
+                {% endif %}
                 <p class="articleContentContainer">
                     {{ object.content |safe }}
                 </p>

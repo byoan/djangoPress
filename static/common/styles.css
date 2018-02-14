@@ -110,3 +110,9 @@ a.articleContent:hover, a.articleContent:active, a.articleContent:focus {
     display: flex;
     margin-top: 0.5rem;
 }
+.articleImageContainer {
+    display: flex;
+    justify-content: center;
+    max-height: 15rem;
+    width: 100%;
+}
