@@ -3,26 +3,6 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-# class Author(models.Model):
-#     username = models.CharField(max_length=200,
-#                                 default=None,
-#                                 blank=True,
-#                                 help_text='username')
-#
-#     firstName = models.CharField(max_length=200,
-#                                  default=None,
-#                                  blank=True,
-#                                  help_text='First Name')
-#
-#     lastName = models.CharField(max_length=200,
-#                                 default=None,
-#                                 blank=True,
-#                                 help_text='Last Name')
-#
-#     def __str__(self):
-#         return '{}'.format(self.username)
-
-
 class Article(models.Model):
     def get_path(self, filename):
         return os.path.join(str(self.id), filename)
