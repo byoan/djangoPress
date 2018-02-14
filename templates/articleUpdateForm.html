@@ -4,7 +4,7 @@
         <div class="formContainer">
             {% if object.author.id == user.id %}
                 <h1>{% trans 'Update article' %}</h1>
-                <form action="" method="post">{% csrf_token %}
+                <form action="" method="post" novalidate>{% csrf_token %}
                     {{ form.as_p }}
                     <input type="submit" class="btn btn-success" value="Update" />
                 </form>

@@ -3,7 +3,7 @@
     <div class="formContainerParent">
         <div class="formContainer">
             <h1>{% trans 'Create an article' %}</h1>
-            <form action="" method="post">{% csrf_token %}
+            <form action="" method="post" novalidate>{% csrf_token %}
                 {{ form.as_p }}
                 <input type="submit" class="btn btn-success" value="{% trans 'Create' %}" />
             </form>
