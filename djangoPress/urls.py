@@ -41,8 +41,10 @@ urlpatterns += i18n_patterns(
     url(_(r'profile/(?P<pk>\w+)'), ProfileView.as_view(), name='profile'),
     url(_(r'search$'), SearchView.as_view(), name='search'),
     url(_(r'create$'), ArticleCreation.as_view(), name="createArticle"),
-    url(_(r'update/(?P<pk>\d+)'), ArticleUpdate.as_view(), name="updateArticle"),
-    url(_(r'delete/(?P<pk>\d+)'), ArticleDelete.as_view(), name="deleteArticle"),
+    url(_(r'update/(?P<pk>\d+)'),
+        ArticleUpdate.as_view(), name="updateArticle"),
+    url(_(r'delete/(?P<pk>\d+)'),
+        ArticleDelete.as_view(), name="deleteArticle"),
     url(_(r'^$'), IndexView.as_view(), name="index"),
     url(_(r'(?P<pk>\d+)'), ArticleDetails.as_view(), name="article"),
 )
