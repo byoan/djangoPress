@@ -19,7 +19,7 @@ supérieure; recherche qui sera effectuée sur les champs Titre et Contenu des a
 
 ## Pré-requis
 
-Pour utiliser cette application, il est requis d'installer le plugin [**Pillow**](https://pillow.readthedocs.io/en/latest/) dans PyCharm
+Pour utiliser cette application, il est requis d'installer [**Django**](https://www.djangoproject.com/) et le plugin [**Pillow**](https://pillow.readthedocs.io/en/latest/) dans PyCharm
  
  
 ## Identifiants
