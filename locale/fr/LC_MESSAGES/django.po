@@ -32,7 +32,7 @@ msgstr "Nom d'utilisateur"
 
 #: app/forms/loginForm.py:14
 msgid "Password"
-msgstr "Mot de passse"
+msgstr "Mot de passe"
 
 #: app/forms/registerForm.py:12
 msgid "Enter a username"
@@ -126,7 +126,7 @@ msgstr "Créer"
 
 #: templates/articleDeleteForm.html:6
 msgid "Delete article"
-msgstr "Suppression d'arciel"
+msgstr "Suppression d'article"
 
 #: templates/articleDeleteForm.html:8
 msgid "Are you sure you want to delete "
