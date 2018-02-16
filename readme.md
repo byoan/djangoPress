@@ -1,5 +1,5 @@
-# Projet Django Licence Pro SIL DA2I
-                                                                                                                                           
+# Projet Django Licence Pro SIL DA2I  
+
 ## Auteur:
 
 * [**Yoan Ballesteros**](https://github.com/byoan)
@@ -19,18 +19,17 @@ supérieure; recherche qui sera effectuée sur les champs Titre et Contenu des a
 
 ## Pré-requis
 
-Pour utiliser cette application, il est requis d'installer le plugin dans PyCharm
- [**Pillow**](https://pillow.readthedocs.io/en/latest/)
+Pour utiliser cette application, il est requis d'installer le plugin [**Pillow**](https://pillow.readthedocs.io/en/latest/) dans PyCharm
  
  
 ## Identifiants
 
 Le compte administrateur est accessible avec les identifiants suivants : 
 
-Nom d'utilisateur : yoan
-Mot de passe : yoanyoan
+Nom d'utilisateur : yoan  
+Mot de passe : yoanyoan  
 
 Voici un compte utilisateur lambda : 
 
-Nom d'utilisateur : user2
-Mot de passe : motdepasse
+Nom d'utilisateur : user2  
+Mot de passe : motdepasse  
